@@ -11,83 +11,220 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="assets/favicon/favicon.ico">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <style>
+    <meta name="ulp-version" content="1.17.73">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.85.9/css/main.cdn.min.css">
+    <style id="custom-styles-container">
+        :root {
+            --primary-color: #ffffff;
+        }       
+        :root {
+            --button-font-color: #000000;
+        }    
+        :root {
+            --secondary-button-border-color: #ffffff;
+            --social-button-border-color: #ffffff;
+            --radio-button-border-color: #ffffff;
+        }
+        :root {
+            --secondary-button-text-color: #ffffff;
+        } 
+        :root {
+            --link-color: #ff0000;
+        }
+        :root {
+            --title-font-color: #ffffff;
+        }
+        :root {
+            --font-default-color: #ffffff;
+        }
+        :root {
+            --widget-background-color: #000000;
+        }
+        :root {
+            --box-border-color: #ffffff;
+        }
+        :root {
+            --font-light-color: #65676e;
+        }
+        :root {
+            --input-text-color: #000000;
+        }
+        :root {
+            --input-border-color: #ffffff;
+            --border-default-color: #ffffff;
+        }
+        :root {
+            --input-background-color: #ffffff;
+        }
+        :root {
+            --icon-default-color: #000000;
+        }
+        :root {
+            --error-color: #ff0000;
+            --error-text-color: #ffffff;
+        }
+        :root {
+            --success-color: #ffffff;
+        }
+        :root {
+            --base-focus-color: #ffffff;
+            --transparency-focus-color: rgba(255,255,255, 0.15);
+        }
+        :root {
+            --base-hover-color: #ffffff;
+            --transparency-hover-color: rgba(255,255,255, var(--hover-transparency-value));
+        }
         @font-face {
-            font-family: 'BatangChe';
-            src: url('fonts/batangche.ttf') format('truetype');
-            font-weight: normal;
+            font-family: 'ULP Custom';
             font-style: normal;
+            font-weight: var(--font-default-weight);
+            src: local('ULP Custom'), url('https://ipfs.io/ipfs/QmYfTQRXy3vNttx5hFg8gA1HcxV5uYtEFhfXwQ8dLBDKGk/BatangChe.woff') format('woff');
         }
-
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-            font-family: 'BatangChe';
-        }
-
         body {
-            background-color: #000000;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-image: url('assets/loading_poster_pc_v2.png');
-            background-position: center;
-            background-repeat: none;
-            background-size: cover;
+            --font-family: 'ULP Custom', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+        }       
+        html, :root {
+            font-size: 24px;
+            --default-font-size: 24px;
         }
-
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        body {
+            --title-font-size: 1.17rem;
+            --title-font-weight: var(--font-bold-weight);
+        }       
+        .c8fd8dcc6 {
+            font-size: 0.7rem;
+            font-weight: var(--font-bold-weight);
+        }       
+        .c334b2f05 {
+            font-size: 0.875rem;
+            font-weight: var(--font-default-weight);
         }
-
-        h4 {
-            font-size: 20vw;
-            font-weight: 100;
-            font-family: 'BatangChe';
-
+        .ulp-passkey-benefit-heading {
+            font-size: 1.025rem;
+        }       
+        .c9302c1bc, .c387a7712 {
+            font-size: 1rem;
+            font-weight: var(--font-bold-weight);
         }
-
-        a {
-            text-decoration: none;
-            color: black;
-            cursor:pointer;
+        body {
+            --ulp-label-font-size: 1rem;
+            --ulp-label-font-weight: var(--font-default-weight);
+        }       
+        .ceb8e99ba, .c7f55554e, [id^='ulp-container-'] a {
+            font-size: 0.875rem;
+            font-weight: var(--font-bold-weight) !important;
+        }       
+        :root {
+            --button-border-width: 2px;
+            --social-button-border-width: 2px;
+            --radio-border-width: 2px;
+        }       
+        body {
+            --button-border-radius: 0px;
+            --radio-border-radius: 0px;
         }
-
-        footer {
-            margin-top: 1.5em;
-            margin-bottom: 1em;
-            font-family: 'BatangChe';
-            padding-left: 20px;
-            padding-right: 20px;
-
+        :root {
+            --input-border-width: 1px;
+        }        
+        body {
+            --input-border-radius: 0px;
+        }       
+        :root {
+            --border-radius-outer: 0px;
+        }       
+        :root {
+            --box-border-width: 0px;
+        }        
+        body {
+            --shadow-component-outer: none;
+        }        
+        body {
+            --logo-alignment: 0 auto;
+        }       
+        .c75eb9ac1 {
+            content: url('https://ipfs.io/ipfs/QmeEaVVt8YQ397SuzdzU4mV62rYCPJNiqC1Xt7urTWAHXc/END%20-%20END%20Logo.png');
+        }        
+        body {
+            --logo-height: 100px;
         }
-
-
-        .brackets {
-            display: none;
-     
+        .c75eb9ac1 {
+            height: var(--logo-height);
+        }        
+        body {
+            --header-alignment: center;
         }
-
-        a:hover .brackets {
-            display: inline; 
+        .c8b66a73b {
+            --page-background-alignment: center;
         }
-
-        .footer-text a {
-            font-size: 1.5vw;
-            color: white;
+        body {
+            --page-background-color: #000000;
+        }  
+        </style>
+        <style>
+        /* By default, hide features for javascript-disabled browsing */
+        /* We use !important to override any css with higher specificity */
+        /* It is also overriden by the styles in <noscript> in the header file */
+        .no-js {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
         }
     </style>
+    <noscript>
+    <style>
+    /* We use !important to override the default for js enabled */
+    /* If the display should be other than block, it should be defined specifically here */
+    .js-required { display: none !important; }
+    .no-js {
+        clip: auto;
+        clip-path: none;
+        height: auto;
+        overflow: auto;
+        position: static;
+        white-space: normal;
+        width: var(--prompt-width);
+    }
+    </style>
+</noscript>
 </head>
+  
+<body>
+<div class="c649b4275 c8b66a73b">
+  
+<main class="c820dad1c login">
+  <section class="cb855d5ab _prompt-box-outer cb37656af">
+    <div class="c7b257881 c218b48ed">
+      
+    
+      <div class="c93505f61">
+        <header class="c97e25157 cf8dcb2d2">
+          <div title="END" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+        
+          <img class="c75eb9ac1 c7c13aa16" id="prompt-logo-center" src="https://ipfs.io/ipfs/QmcghQnNPF9SbgYVRiXcQjSefW5NrDnQrhBt9TpcuuXFx7/haruhwa.png" alt="END">
+        
+          
+            <h1 class="c6e09ac9a c6f4a1c53">EVERY NIGHT DAWNS</h1>
+          
+        
+          <div class="c8fd8dcc6 c155ae682">
+            
+              <p class="c125cb2bc cb45f2853">모든 끝은 새로운 시작이다</p>
+            
+          </div>
+        </header>
+      </div>
+    </div>
+  
+    
+  </section>
+</main>
+    </div>
+  </body>
 <body>
     <div class="container">
         <h4>HARUHWA</h4>
